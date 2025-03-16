@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "adminSettingId": {
+            "type": "integer"
+          },
+          "pointFee": {
+            "type": "number"
+          },
+          "depositFee": {
+            "type": "number"
+          },  
+          "depositFeeMin": {
+            "type": "integer"
+          },         
+          "sellingFee": {
+            "type": "number"
+          },  
+          "sellingFeeMin": {
+            "type": "integer"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

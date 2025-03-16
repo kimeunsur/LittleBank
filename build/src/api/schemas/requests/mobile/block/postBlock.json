@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {  
+    "blockProfileId": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "blockProfileId"
+  ],
+  "additionalProperties": false
+}

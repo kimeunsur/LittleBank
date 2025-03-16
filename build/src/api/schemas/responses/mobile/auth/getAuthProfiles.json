@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {              
+          "profileId": {
+            "type": "integer"
+          },
+          "profileImage": {
+            "type": "string"
+          },        
+          "relation": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "isParent": {
+            "type": "boolean"
+          },
+          "profilePass": {
+            "type": "string"
+          }        
+        },
+        "additionalProperties": false
+      }
+    },
+    "total": {
+      "type": "integer"
+    },
+    "userId": {
+      "type": "integer"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

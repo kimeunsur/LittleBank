@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {        
+          "reportId": {
+            "type": "integer"
+          },
+          "profileId": {
+            "type": "integer"
+          },  
+          "reportProfileId": {
+            "type": "integer"
+          },
+          "reportProfileImage": {
+            "type": "string"
+          },
+          "reportReason": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": ["data", "total"],
+  "additionalProperties": false
+}

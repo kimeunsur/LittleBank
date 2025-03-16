@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "allowanceTaskId": {
+            "type": "integer"
+          },         
+          "taskContent": {
+            "type": "string"
+          },
+          "taskAmount": {
+            "type": "integer"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

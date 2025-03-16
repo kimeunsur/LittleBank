@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "properties": {    
+    "chatRoomId": {
+      "type": "string"
+    },
+    "missionChat": {
+      "type": "string"
+    },
+    "missionAmount": {
+      "type": "integer"
+    },
+    "missionStartDate": {      
+      "type": "string",
+      "format": "date"      
+    },
+    "missionEndDate": {    
+      "type": "string",
+      "format": "date"          
+    },
+    "missionParentComment": {
+      "type": "string"
+    },
+    "missionParentImage": {
+      "type": "string"
+    }
+  },
+  "required": [ 
+    "chatRoomId",
+    "missionChat",
+    "missionAmount",
+    "missionStartDate",
+    "missionEndDate",
+    "missionParentComment",
+    "missionParentImage"
+  ],
+  "additionalProperties": false
+}

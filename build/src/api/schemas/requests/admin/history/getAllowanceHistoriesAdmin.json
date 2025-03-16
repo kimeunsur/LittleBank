@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "properties": {    
+    "startTime": {
+      "type": "string",
+      "format": "date",
+      "example":"2024-08-14"
+    },
+    "endTime": {
+      "type": "string",
+      "format": "date",
+      "example":"2024-12-30"
+    },
+    "order": {
+      "type":"string",
+      "enum": ["DESC", "ASC"],
+      "default": "DESC"
+    },
+    "page":  {
+      "type": "integer",
+      "default": 1
+    },
+    "perPage": {
+      "type": "integer",
+      "minimum": 5,
+      "default": 5
+    }  
+  },
+  "required": [
+    "order",
+    "page",
+    "perPage"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "properties": {
+    "chatRoomId": {
+      "type": "integer"
+    },   
+    "albumChat": {
+      "type": "string"
+    },
+    "albumAmount": {
+      "type": "integer"
+    },
+    "albumImages": {
+      "type": "array",
+      "items": {
+        "type": "string"      
+      }
+    }
+  },
+  "required": [
+    "chatRoomId",
+    "albumChat",
+    "albumAmount",
+    "albumImages"
+  ],
+  "additionalProperties": false
+}

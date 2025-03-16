@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "allowanceAlbumId": {
+      "type": "integer"
+    },  
+    "albumChat": {
+      "type": "string"
+    },
+    "albumAmount": {
+      "type": "integer"
+    }, 
+    "albumStatus": {
+      "type": "string"
+    },
+    "albumImages": {
+      "type": "array",
+      "description": "이미지 문자열 배열입니다.",
+      "items": {
+        "albumImage": {
+            "type": "string"
+          }
+      }      
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

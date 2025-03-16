@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "properties": {   
+    "fcmToken": {
+      "type": "string"      
+    },
+    "profilePass": {
+      "type": "string"
+    },    
+    "profileImage": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "bankCode": {
+      "type": "string"      
+    },
+    "bankName": {
+      "type": "string"      
+    },
+    "bankAccount": {
+      "type": "string"      
+    },
+    "relation": {
+      "type": "string",
+      "enum": ["dad","mom","child"]
+    }    
+  },
+  "required": [    
+    "profilePass",    
+    "name",    
+    "relation"
+  ],
+  "additionalProperties": false
+}

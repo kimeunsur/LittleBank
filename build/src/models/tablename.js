@@ -1,0 +1,27 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var TableName;
+(function (TableName) {
+    TableName["admin"] = "admin";
+    TableName["adminSetting"] = "admin_setting";
+    TableName["allowanceAlbum"] = "allowance_album";
+    TableName["allowanceAlbumImage"] = "allowance_album_image";
+    TableName["allowanceChat"] = "allowance_chat";
+    TableName["allowanceHistory"] = "allowance_history";
+    TableName["allowanceMission"] = "allowance_mission";
+    TableName["allowanceSettlement"] = "allowance_settlement";
+    TableName["allowanceTask"] = "allowance_task";
+    TableName["appVersion"] = "app_version";
+    TableName["block"] = "block";
+    TableName["buddy"] = "buddy";
+    TableName["chatMessage"] = "chat_message";
+    TableName["chatRoom"] = "chat_room";
+    TableName["chatUser"] = "chat_user";
+    TableName["codeBank"] = "code_bank";
+    TableName["payment"] = "payment";
+    TableName["profile"] = "profile";
+    TableName["report"] = "report";
+    TableName["user"] = "user";
+    TableName["userSetting"] = "user_setting";
+})(TableName || (TableName = {}));
+exports.default = TableName;

@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {        
+          "blockId": {
+            "type": "integer"
+          },
+          "profileId": {
+            "type": "integer"
+          },  
+          "blockProfileId": {
+            "type": "integer"
+          },
+          "blockProfileImage": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

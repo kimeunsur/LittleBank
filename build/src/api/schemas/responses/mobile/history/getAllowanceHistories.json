@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "allowanceHistoryId": {
+            "type": "integer"
+          },
+          "date": {
+            "type": "string"
+          },         
+          "allowanceType": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "integer"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "balance": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

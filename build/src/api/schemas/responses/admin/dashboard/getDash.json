@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "properties": {
+    "totalPayment": {
+      "type": "integer"
+    },
+    "totalPaymentFee": {
+      "type": "integer"
+    },
+    "totalParentPoint": {
+      "type": "integer"
+    },
+    "totalSettlement": {
+      "type": "integer"
+    },
+    "totalSettlementFee": {
+      "type": "integer"
+    },
+    "totalChildPoint": {
+      "type": "integer"
+    },
+    "monthPayment": {
+      "type": "integer"
+    },
+    "monthPaymentFee": {
+      "type": "integer"
+    },
+    "monthSettlement": {
+      "type": "integer"
+    },
+    "monthSettlementFee": {
+      "type": "integer"
+    },
+    "totalAlbumAmount": {
+      "type": "integer"
+    },
+    "totalAlbumAmountFee": {
+      "type": "integer"
+    },
+    "monthAlbumAmount": {
+      "type": "integer"
+    },
+    "monthAlbumAmountFee": {
+      "type": "integer"
+    },    
+    "manualSettlementCount": {
+      "type": "integer"
+    },
+    "manualSettlementAmount": {
+      "type": "integer"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

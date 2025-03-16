@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "familyAlarm": {
+      "type": "boolean"
+    },
+    "friendAlarm": {
+      "type": "boolean"
+    },
+    "autoFriend": {
+      "type": "boolean"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

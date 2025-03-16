@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {  
+    "profilePass": {
+      "type": "string"
+    },
+    "profileImage": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "bankCode": {
+      "type": "string"      
+    },
+    "bankName": {
+      "type": "string"      
+    },
+    "bankAccount": {
+      "type": "string"      
+    }  
+  },
+  "required": [],
+  "additionalProperties": false
+}

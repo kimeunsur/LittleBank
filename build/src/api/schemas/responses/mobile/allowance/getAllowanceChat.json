@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "allowanceChatId": {
+      "type": "integer"
+    },
+    "allowanceChat": {
+      "type": "string"
+    },
+    "allowanceChatImage": {
+      "type": "string"
+    }, 
+    "allowanceContent": {
+      "type": "string"
+    }, 
+    "allowanceAmount": {
+      "type": "string"
+    },  
+    "allowanceChatStatus": {
+      "type": "string"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}
