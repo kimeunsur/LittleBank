@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {  
+    "taskContent": {
+      "type": "string"
+    },
+    "taskAmount": {
+      "type": "integer"
+    }
+  },
+  "required": ["taskContent", "taskAmount"],
+  "additionalProperties": false
+}

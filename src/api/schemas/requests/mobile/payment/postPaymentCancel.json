@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {    
+    "cancelReason ": {
+      "type": "string"      
+    }
+  },
+  "required": [
+    "cancelReason"
+  ],
+  "additionalProperties": false
+}

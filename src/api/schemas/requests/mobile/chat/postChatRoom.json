@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "targetProfileId": {
+      "type": "integer"      
+    }
+  },
+  "required": [
+  ],
+  "additionalProperties": false
+}

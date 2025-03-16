@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "properties": {
+    "profileId": {
+      "type": "integer"
+    },
+    "profileImage": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "bankName": {
+      "type": "string"
+    },
+    "bankAccount": {
+      "type": "string"
+    },
+    "relation": {
+      "type": "string"
+    },
+    "isParent": {
+      "type": "boolean"
+    },
+    "parentAmount": {
+      "type": "integer"
+    },
+    "childAmount": {
+      "type": "integer"
+    } 
+  },
+  "required": [],
+  "additionalProperties": false
+}

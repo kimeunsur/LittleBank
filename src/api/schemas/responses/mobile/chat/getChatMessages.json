@@ -1,0 +1,70 @@
+{
+  "type": "object",
+  "properties": {
+    "profileId": {
+      "description": "프로필 ID입니다.",
+      "type": "integer"
+    },
+    "messages": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "description": "메시지 목록입니다.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "chatMessageId": {
+                "type": "integer"
+              },
+              "profileId": {
+                "type": "integer"
+              },
+              "profileImage": {
+                "type": "string"
+              },
+              "content": {
+                "type": "object",
+                "description": "chatType에 따라 달라지는 값입니다. 해당 API description이나 노션 리틀뱅크 게시판 목록 참고 부탁드립니다. (e.g., message/photo, mission, album, task)."
+              },
+              "name": {
+                "type": "string"
+              },
+              "chatType": {
+                "type": "string"
+              },
+              "createdAt": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "chatMessageId",
+              "profileId",
+              "profileImage",
+              "content",
+              "name",
+              "chatType",
+              "createdAt"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "total": {
+          "description": "조회한 메시지 개수입니다.",
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "data",
+        "total"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "profileId",
+    "messages"
+  ],
+  "additionalProperties": false
+}

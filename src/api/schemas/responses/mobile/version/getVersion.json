@@ -1,0 +1,19 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "deviceType": {
+        "type": "string"
+      },
+      "compulVersion": {
+        "type": "string"
+      },
+      "optVersion": {
+        "type": "string"
+      }
+    },
+    "required": [],
+    "additionalProperties": false
+  }
+}

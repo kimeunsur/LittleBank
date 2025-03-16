@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties": {  
+    "reportProfileId": {
+      "type": "integer"
+    },
+    "reportReason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "reportProfileId"
+  ],
+  "additionalProperties": false
+}

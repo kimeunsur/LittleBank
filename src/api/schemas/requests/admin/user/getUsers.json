@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "search": {
+      "type": "string"
+    },
+    "order": {
+      "type":"string",
+      "enum": ["DESC", "ASC"],
+      "default": "DESC"
+    },
+    "page":  {
+      "type": "integer",
+      "default": 1
+    },
+    "perPage": {
+      "type": "integer",
+      "minimum": 5,
+      "default": 5
+    }  
+  },
+  "required": [
+    "order",
+    "page",
+    "perPage"
+  ],
+  "additionalProperties": false
+}

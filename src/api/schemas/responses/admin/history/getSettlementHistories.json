@@ -1,0 +1,52 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "allowanceSettlementId": {
+            "type": "integer"
+          },
+          "profileId": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "settlementType": {
+            "type": "string"
+          },
+          "settlementStatus": {
+            "type": "string"
+          },
+          "settlementAmount": {
+            "type": "integer"
+          },
+          "realSettlementAmount": {
+            "type": "integer"
+          },
+          "settlementFee": {
+            "type": "integer"
+          },
+          "bankName": {
+            "type": "string"
+          },
+          "bankAccount": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string"            
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

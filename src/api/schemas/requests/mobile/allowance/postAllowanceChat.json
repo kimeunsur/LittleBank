@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "properties": {
+    "chatRoomId": {
+      "type": "integer"
+    },
+    "allowanceTaskId": {
+      "type": "integer"
+    },
+    "allowanceChat": {
+      "type": "string"
+    },
+    "allowanceChatImage": {
+      "type": "string"
+    }   
+  },
+  "required": [
+    "chatRoomId",
+    "allowanceTaskId",
+    "allowanceChat",
+    "allowanceChatImage"
+  ],
+  "additionalProperties": false
+}

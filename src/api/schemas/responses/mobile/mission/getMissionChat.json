@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "properties": {
+    "allowanceMissionId": {
+      "type": "integer"
+    },    
+    "profileId": {
+      "type": "integer"
+    },
+    "missionChat": {
+      "type": "string"
+    },
+    "missionAmount": {
+      "type": "integer"
+    },
+    "missionStartDate": {      
+      "type": "string",
+      "format": "date"      
+    },
+    "missionEndDate": {    
+      "type": "string",
+      "format": "date"          
+    },
+    "missionParentComment": {
+      "type": "string"
+    },
+    "missionParentImage": {
+      "type": "string"
+    },
+    "missionChildComment": {
+      "type": "string"
+    },
+    "missionChildImage": {
+      "type": "string"
+    },
+    "missionStatus": {
+      "type": "string"
+    },
+    "childProfileId": {
+      "type": "integer",
+      "nullable": true
+    },
+    "childProfileImage": {
+      "type": "string",
+      "nullable": true
+    },
+    "childProfileName": {
+      "type": "string",
+      "nullable": true
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

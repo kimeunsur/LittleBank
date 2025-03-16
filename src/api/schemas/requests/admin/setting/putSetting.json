@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "pointFee": {
+      "type": "number"
+    },
+    "depositFee": {
+      "type": "number"
+    },  
+    "depositFeeMin": {
+      "type": "integer"
+    },         
+    "sellingFee": {
+      "type": "number"
+    },  
+    "sellingFeeMin": {
+      "type": "integer"
+    },
+    "url": {
+      "type": "string"
+    }  
+  },
+  "required": [],
+  "additionalProperties": false
+}

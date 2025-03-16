@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "properties": {  
+    "buddyProfileId": {
+      "type": "integer"
+    },
+    "buddyNameMy": {
+      "type": "string"
+    },
+    "buddyNameYou": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "buddyProfileId",
+    "buddyNameMy",
+    "buddyNameYou"
+  ],
+  "additionalProperties": false
+}

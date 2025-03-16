@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {   
+    "danalImpUid": {
+      "type": "string"
+    },
+    "otp": {
+      "type": "string"
+    }    
+  },
+  "required": [    
+    "profilePass",    
+    "name",    
+    "relation"
+  ],
+  "additionalProperties": false
+}

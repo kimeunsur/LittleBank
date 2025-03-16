@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "properties": {     
+    "missionChat": {
+      "type": "string"
+    },
+    "missionAmount": {
+      "type": "integer"
+    },
+    "missionStartDate": {
+      "type": "string",
+      "format": "date"       
+    },
+    "missionEndDate": {
+      "type": "string",
+      "format": "date"       
+    },
+    "missionParentComment": {
+      "type": "string"
+    },
+    "missionParentImage": {
+      "type": "string"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}
