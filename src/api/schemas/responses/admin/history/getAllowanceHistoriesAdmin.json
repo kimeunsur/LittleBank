@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "allowanceHistoryId": {
+            "type": "integer"
+          },         
+          "allowanceType": {
+            "type": "string"
+          },        
+          "amount": {
+            "type": "integer"
+          },       
+          "email": {
+            "type": "string"
+          },           
+          "name": {
+            "type": "string"
+          },
+          "profileId": {
+            "type": "integer"
+          },               
+          "createdAt": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },  
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

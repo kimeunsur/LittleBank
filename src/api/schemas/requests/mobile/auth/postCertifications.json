@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "properties": {   
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },    
+    "birth": {
+      "type": "string"
+    },
+    "genderDigit": {
+      "type": "string"
+    },
+    "carrier": {
+      "type": "string",
+      "enum": ["SKT","KT","LGT"]
+    },
+    "isMvno": {
+      "type": "boolean",
+      "example": false
+    }
+  },
+  "required": [          
+    "name", 
+    "phone",
+    "birth",
+    "genderDigit",
+    "carrier",
+    "isMvno"
+  ],
+  "additionalProperties": false
+}

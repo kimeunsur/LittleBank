@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "properties": {
+    "paymentId": {
+      "type": "integer"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

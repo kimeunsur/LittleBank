@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 1,
+      "description": "최소값은 1입니다."
+    },
+    "perPage": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 25
+    }
+  },
+  "required": ["page", "perPage"],
+  "additionalProperties": false
+}

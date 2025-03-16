@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "adminId": {
+      "type": "integer"
+    },
+    "adminName": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "adminId",
+    "adminName"
+  ],
+  "additionalProperties": false
+}

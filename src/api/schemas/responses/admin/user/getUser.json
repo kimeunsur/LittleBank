@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "profileId": {
+            "type": "integer"
+          },
+          "userId": {
+            "type": "integer"
+          },         
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "relation": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "profilePass": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "userCreatedAt": {
+            "type": "string"
+          },
+          "profileCreatedAt": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "integer"
+          },
+          "bankName": {
+            "type": "string"
+          },
+          "bankAccount": {
+            "type": "string"
+          }          
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

@@ -1,0 +1,151 @@
+version: '3.7'
+services:
+  traefik:
+    image: traefik:v2.3.5
+    command:
+      #- --log.level=DEBUG
+      - --api.insecure=true
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      - --providers.docker.swarmMode=true
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+      - --certificatesResolvers.alphabase.acme.httpchallenge=true
+      - --certificatesResolvers.alphabase.acme.httpchallenge.entrypoint=web
+      - --certificatesresolvers.alphabase.acme.storage=/letsencrypt/acme.json
+      - --certificatesResolvers.alphabase.acme.email=alphabase@gmail.com
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+        mode: host
+      - target: 443
+        published: 443
+        protocol: tcp
+        mode: host
+    volumes:
+      - letsencrypt:/letsencrypt
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - inbound
+    logging:
+      options:
+        max-file: '1'
+        max-size: '20m'
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.role == manager
+      labels:
+        - traefik.enable=true
+        - traefik.docker.lbswarm=true
+        - traefik.docker.network=inbound
+        - traefik.http.routers.traefik.rule=Host(`prod-traefik.siwonpp.co.kr`)
+        - traefik.http.routers.traefik.entrypoints=web
+        - traefik.http.services.traefik-service.loadbalancer.server.port=8080
+        - traefik.http.middlewares.traefik-ipwhitelist.ipwhitelist.sourcerange=61.74.89.189
+
+  portainer:
+    image: portainer/portainer
+    command: -H tcp://tasks.agent:9001 --tlsskipverify
+    volumes:
+      - portainer_data:/data
+    networks:
+      - inbound
+      - agent_network
+    logging:
+      options:
+        max-file: '1'
+        max-size: '20m'
+    depends_on:
+      - agent
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      labels:
+        - traefik.enable=true
+        - traefik.docker.lbswarm=true
+        - traefik.docker.network=inbound
+        - traefik.http.routers.portainer.rule=Host(`prod-portainer.siwonpp.co.kr`)
+        - traefik.http.routers.portainer.entrypoints=web
+        - traefik.http.services.portainer-service.loadbalancer.server.port=9000
+        - traefik.http.middlewares.portainer-ipwhitelist.ipwhitelist.sourcerange=61.74.89.189
+
+  agent:
+    image: portainer/agent
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /var/lib/docker/volumes:/var/lib/docker/volumes
+    networks:
+      - agent_network
+    logging:
+      options:
+        max-file: '1'
+        max-size: '20m'
+    deploy:
+      mode: global
+      placement:
+        constraints:
+          - node.platform.os == linux
+          - node.role == manager
+
+  # fluentd:
+  #   image: 627748179549.dkr.ecr.ap-southeast-3.amazonaws.com/rapopoo-fluentd-prod:latest
+  #   ports:
+  #     - 24224:24224
+  #     - 24224:24224/udp
+  #   networks:
+  #     - backend
+  #   logging:
+  #     options:
+  #       max-file: '1'
+  #       max-size: '20m'
+  #   deploy:
+  #     mode: global
+
+  mongodb:
+    image: mongo:4
+    networks:
+      - backend
+    volumes:
+      - mongodb:/data/db
+    logging:
+      driver: json-file
+      options:
+        max-file: '5'
+        max-size: '20m'
+
+  redis:
+    image: library/redis:6
+    networks:
+      - backend
+    volumes:
+      - redis_data:/data
+    logging:
+      driver: json-file
+      options:
+        max-file: '1'
+        max-size: '20m'
+
+volumes:
+  letsencrypt:
+  portainer_data:
+  elasticsearch_data:
+  kibana_data:
+  redis_data:
+  mongodb:
+
+networks:
+  inbound:
+    name: inbound
+
+  backend:
+    name: backend
+
+  agent_network:
+    name: agent_network

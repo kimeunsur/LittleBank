@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {    
+    "settlementType": {
+      "type": "string",
+      "enum" :["auto","manual"]
+    },
+    "settlementAmount": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "settlementType",
+    "settlementAmount"
+  ],
+  "additionalProperties": false
+}

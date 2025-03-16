@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "properties": {    
+    "product": {
+      "type": "string"      
+    },
+    "amount": {
+      "type": "integer"
+    },
+    "orderId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "product",
+    "amount",
+    "orderId"
+  ],
+  "additionalProperties": false
+}

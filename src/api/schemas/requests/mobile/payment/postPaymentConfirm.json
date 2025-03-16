@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "properties": {    
+    "paymentKey": {
+      "type": "string"      
+    },    
+    "orderId": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "paymentKey",   
+    "orderId",
+    "amount"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "properties": {
+    "profileId": {
+      "type": "integer"
+    },
+    "familyAlarm": {
+      "type": "boolean"
+    },
+    "friendAlarm": {
+      "type": "boolean"
+    },
+    "autoFriend": {
+      "type": "boolean"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

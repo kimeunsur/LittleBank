@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {    
+    "fcmToken": {
+      "type": "string"
+    }    
+  },
+  "required": [
+    "fcmToken"
+  ],
+  "additionalProperties": false
+}

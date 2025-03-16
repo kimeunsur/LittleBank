@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": ["image", "video", "file", "thumbnail"]
+    },
+    "mimeType": {
+      "type": "string"
+    },
+    "imageUploadTarget": {
+      "type": "string",      
+      "enum": ["profile", "album", "chat", "allowance", "mission"]
+    },
+    "num": {
+      "type": "integer",
+      "minimum": 1
+    }
+  },
+  "required": [
+    "type",
+    "mimeType",
+    "imageUploadTarget"
+  ]
+}

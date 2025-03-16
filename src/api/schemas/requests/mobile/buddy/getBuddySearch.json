@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "properties": {  
+    "email": {
+      "type": "string"
+    },
+    "page": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 1
+    },
+    "perPage": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 5
+    }
+  },
+  "required": [
+    "email",
+    "page",
+    "perPage"
+  ],
+  "additionalProperties": false
+}

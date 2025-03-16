@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "properties": {
+    "profileId": {
+      "type": "integer"          
+    },
+    "userId": {
+      "type": "integer"          
+    },
+    "isParent": {
+      "type": "boolean"          
+    },
+    "accessToken": {
+      "type": "string"
+    },
+    "refreshToken": {
+      "type": "string"
+    }    
+  },
+  "required": [],
+  "additionalProperties": false
+}

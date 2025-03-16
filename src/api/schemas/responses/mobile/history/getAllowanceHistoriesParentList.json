@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "profileId": {
+            "type": "integer"
+          },
+          "profileImage": {
+            "type": "string"
+          },       
+          "name": {
+            "type": "string"
+          },       
+          "allowanceAmount": {
+            "type": "integer"
+          },
+          "missionAmount": {
+            "type": "integer"
+          },
+          "albumAmount": {
+            "type": "integer"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

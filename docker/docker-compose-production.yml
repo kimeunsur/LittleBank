@@ -1,0 +1,70 @@
+version: '3.7'
+services:
+  backend:
+    image: 905418439565.dkr.ecr.ap-northeast-2.amazonaws.com/littlebank-prod-backend:latest
+    environment:
+      - NODE_ENV=production
+    networks:
+      - inbound
+      - backend
+    logging:
+      driver: 'awslogs'
+      options:
+        awslogs-region: 'ap-northeast-2'
+        awslogs-group: 'prod-littlebank'
+        awslogs-create-group: 'true'
+        awslogs-stream: 'backend'
+        awslogs-multiline-pattern: '^\['   
+    deploy:
+      mode: replicated
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+      labels:
+        - traefik.enable=true
+        - traefik.docker.lbswarm=true
+        - traefik.docker.network=inbound
+        - traefik.http.routers.littlebank-backend.rule=Host(`prod-be.siwonpp.co.kr`)
+        - traefik.http.routers.littlebank-backend.entrypoints=websecure
+        - traefik.http.routers.littlebank-backend.tls=true
+        - traefik.http.routers.littlebank-backend.tls.certresolver=alphabase
+        - traefik.http.services.littlebank-backend-service.loadbalancer.server.port=4000
+
+  admin:
+    image: 905418439565.dkr.ecr.ap-northeast-2.amazonaws.com/littlebank-prod-admin:latest
+    networks:
+      - inbound
+    deploy:
+      mode: replicated
+      replicas: 2
+      update_config:
+        parallelism: 1
+        delay: 10s
+      labels:
+        - traefik.enable=true
+        - traefik.docker.lbswarm=true
+        - traefik.docker.network=inbound
+
+        - traefik.http.routers.littlebank-admin.rule=Host(`admin.siwonpp.co.kr`)
+        - traefik.http.routers.littlebank-admin.entrypoints=web
+        - traefik.http.routers.littlebank-admin.middlewares=littlebank-admin-redirect
+
+        - traefik.http.routers.littlebank-admin-secured.rule=Host(`admin.siwonpp.co.kr`)
+        - traefik.http.routers.littlebank-admin-secured.entrypoints=websecure
+        - traefik.http.routers.littlebank-admin-secured.tls=true
+        - traefik.http.routers.littlebank-admin-secured.tls.certresolver=alphabase
+
+        - traefik.http.middlewares.littlebank-admin-redirect.redirectscheme.scheme=https
+        - traefik.http.middlewares.littlebank-admin-redirect.redirectscheme.permanent=true
+
+        - traefik.http.services.littlebank-admin-service.loadbalancer.server.port=5380  
+
+networks:
+  inbound:
+    external: true
+    name: inbound
+
+  backend:
+    external: true
+    name: backend

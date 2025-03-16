@@ -1,0 +1,49 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "paymentId": {
+            "type": "integer"
+          },         
+          "email": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "integer"
+          },  
+          "name": {
+            "type": "string"
+          },
+          "profileId": {
+            "type": "integer"
+          },  
+          "paymentStatus": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "integer"
+          },
+          "realAmount": {
+            "type": "integer"
+          },
+          "paymentFee": {
+            "type": "integer"
+          },
+          "createdAt": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },  
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

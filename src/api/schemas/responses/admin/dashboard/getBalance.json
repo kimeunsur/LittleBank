@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "RESP_CD": {
+      "type": "string"
+    },
+    "TRSC_SEQ_NO": {
+      "type": "string"
+    },
+    "WDRW_CAN_AMT": {
+      "type": "string"
+    },
+    "RESP_MSG": {
+      "type": "string"
+    },
+    "BAL_AMT": {
+      "type": "string"
+    },
+    "WDRW_CANNOT_AMT": {
+      "type": "string"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "properties": {
+    "date": {    
+      "type": "string",
+      "format": "date",
+      "example":"2024-08-07"
+    },
+    "page": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 1
+    },
+    "perPage": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 5
+    }
+  },
+  "required": [
+    "date",
+    "page",
+    "perPage"
+  ],
+  "additionalProperties": false
+}

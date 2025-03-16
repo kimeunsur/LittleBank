@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "paymentId": {
+            "type": "integer"
+          },         
+          "profileId": {
+            "type": "integer"
+          },
+          "product": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "integer"
+          },
+          "paymentFee": {
+            "type": "integer"
+          },
+          "orderId": {
+            "type": "string"
+          },
+          "paymentStatus": {
+            "type": "string"
+          },
+          "updatedAt": {
+            "type": "string"            
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

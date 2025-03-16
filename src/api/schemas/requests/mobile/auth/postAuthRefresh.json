@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties": {    
+    "refreshToken": {
+      "type": "string"
+    },
+    "fcmToken": {
+      "type": "string"
+    }    
+  },
+  "required": [
+    "refreshToken"
+  ],
+  "additionalProperties": false
+}
