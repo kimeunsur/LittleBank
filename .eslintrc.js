@@ -6,7 +6,12 @@ module.exports = {
     commonjs: true
   },
   parser: '@typescript-eslint/parser',
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "sourceType": "module"
+  },
   extends: [
+    'eslint:recommended',
     'airbnb-base',
     'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
@@ -20,6 +25,7 @@ module.exports = {
   ignorePatterns: ['src/public'],
   plugins: ['chai-expect', 'promise', 'prettier', 'security'],
   rules: {
+    "@typescript-eslint/no-explicit-any": "off",
     'prettier/prettier': ['error'],
     camelcase: 0,
     'consistent-return': 0,

@@ -8,7 +8,7 @@ export = {
     debug: []
   },
   redis: {
-    host: 'redis',
+    host: 'localhost',
     port: 6379
   },
   mongodb: {

@@ -80,7 +80,7 @@ function admin() {
     try {
       const deviceId = await getDeviceIdFromHeader(req)
       req.deviceId = deviceId
-
+      //로그인 세션
       if (req.session && req.session.adminId) {
         if (req.session.type === 'admin') {          
           return next()

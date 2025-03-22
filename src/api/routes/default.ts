@@ -1,3 +1,6 @@
+import { Router } from 'express'
+
+const router=Router()
 interface IApiRouter {
   coerceTypes?: string
   contentType?: string
@@ -57,3 +60,27 @@ export class ApiRouter {
     this.coerceTypes = object.coerceTypes ? object.coerceTypes : 'array'
   }
 }
+function getController(path: string, obj: any, router: Router): void {
+  if (typeof obj === 'function') {
+    router.use(path, obj)
+  } else {
+    Object.keys(obj).forEach((key) => {
+      const ctrl = obj[key]
+      if (ctrl instanceof ApiRouter) {
+        let url
+        if (typeof ctrl.name === 'string') {
+          url = ctrl.name.length > 0 ? `${path}/${ctrl.name}` : path
+        } else {
+          url = `${path}/${key}`
+        }
+        
+        console.log(`✅ Registering API: ${ctrl.method.toUpperCase()} ${url}`) // ✅ 라우트 등록 로그 추가
+
+        if (!ctrl.handler) throw new Error(`${url} handler is required`)
+        const args = [ctrl.handler]
+        router[ctrl.method](url, args)
+      }
+    })
+  }
+}
+export default router
