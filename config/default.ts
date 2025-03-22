@@ -15,7 +15,7 @@ export = {
     agenda: 'mongodb://127.0.0.1:27017/agenda'
   },
   redis: {
-    host: 'localhost',
+    host: '127.0.0.1',
     port: 6379
   },
   swagger: {

@@ -1,6 +1,6 @@
 import {ApiRouter} from '../../default'
 import {authCtrl} from "./authCtrl"
-
+import {Router} from 'express'
 const getAuth = new ApiRouter({
   name: '',
   method: 'get',

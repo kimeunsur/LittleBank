@@ -132,3 +132,16 @@ export default app
 export const expressManager = {
   redisClient 
 }
+
+app.use((req, res, next) => {
+  console.log(`[ROUTE HIT] ${req.method} ${req.url}`)
+  next()
+})
+
+// ✅ 현재 등록된 모든 라우트 출력
+app._router.stack.forEach((r) => {
+  if (r.route && r.route.path) {
+    console.log(`✅ Registered Route: ${r.route.path}`)
+  }
+})
+console.log("🔍 Redis Config:", config.get('redis'));

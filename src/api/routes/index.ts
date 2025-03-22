@@ -76,10 +76,14 @@ function loadRoutes(dir: string, currentDir: string, router: Router): void {
     .forEach((target) => {
       const targetDir = path.join(dir, target)
       const routePath = path.dirname(`/${path.relative(currentDir, targetDir)}`)
+
+      console.log(`🔍 Checking: ${targetDir}`) // ✅ 라우트 탐색 확인
+
       if (fs.lstatSync(targetDir).isDirectory()) {
         loadRoutes(targetDir, currentDir, router)
       } else if (target.startsWith('index.') && !excluded.includes(routePath)) {
         const importPath = path.relative(__dirname, targetDir)
+        console.log(`✅ Loading route: ./${importPath}`) // ✅ 실제 불러오는 파일 로그
         const file = require(`./${importPath}`)
         getController(routePath, file.default || file, router)
       }
