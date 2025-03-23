@@ -57,7 +57,7 @@ function getController(path: string, obj: any, router: Router): void {
 
         if (path.startsWith('/admin')&& !ctrl.isPublic) args.unshift(authMiddleware.admin())        
         else if (!ctrl.isPublic) args.unshift(authMiddleware.user(ctrl.roles))
-        else args.unshift(authMiddleware.guest(ctrl.roles))
+        else (authMiddleware.guest(ctrl.roles))
 
         args.unshift(validateResponse(ctrl))
         router[ctrl.method](url, args)
@@ -92,7 +92,7 @@ function loadRoutes(dir: string, currentDir: string, router: Router): void {
 
 export default (app: Application): void => {
   const router = Router()
-  loadRoutes(__dirname, __dirname, router)
+  loadRoutes(__dirname, __dirname, router) //모든 폴더 순회하며 index.ts 탐색
   app.use('/api', router)
   app.use(notFound)
   app.use(errorHandler)

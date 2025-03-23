@@ -15,12 +15,12 @@ const getDash = new ApiRouter({
 
   `,
   tags: ['Dash'],
-  isPublic: false,
+  isPublic: false, //인증 필요
   paths: ['common/stringPath'],
   responses: {
     200: { schema: 'responses/admin/dashboard/getDash'}   
   },
-  handler: dashboardCtrl.getDash
+  handler: dashboardCtrl.getDash //실제 처리 함수 연결
 })
 
 const getBalance = new ApiRouter({

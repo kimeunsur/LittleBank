@@ -30,9 +30,9 @@ export class ApiRouter {
   isPublic: boolean
   method: string
   middlewares: Function[]
-  name: string
+  name: string //url에서의 path 부분
   parameters: any[]
-  paths: string[]
+  paths: string[] //path parameter 타입 저장
   responses: Dictionary
   roles: string[]
   schema: string

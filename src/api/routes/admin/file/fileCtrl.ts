@@ -6,9 +6,9 @@ import { v4 as uuid } from "uuid"
 class FileCtrl{
   async getFilesUpload(req:IRequest, res: Response, next: Function): Promise<any> {
     try {
+      //type; 파일 종류 mimetype; 파일 Mime 타입 imageuploadtarget; 업로드 목적/위치 num; 발급받을 url 개수
       const {mimeType, type, imageUploadTarget, num} = req.options
       const extensions = mime.extensions[mimeType]
-
       if(type === 'image' && !mimeType.startsWith('image/')) {throw new Error("bad_mimetype")}
       if(!extensions) {throw new Error("bad_mimetype")}
       
